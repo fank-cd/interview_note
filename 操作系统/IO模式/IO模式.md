@@ -72,23 +72,10 @@ IO多路复用
   * 如果没有大量的idle-connection或者dead-connection，epoll的效率并不会比select/poll高很多，但是当遇到大量的idle-connection，就会发现epoll的效率大大高于select/poll
 
 | select| poll| epoll
----|---|---|---
+---|---|---
 索引就绪文件描述符的时间复杂度| O(n)| O(n)| O(1)
 最大支持文件描述符数| 1024| 没有最大连接数限制| 没有最大连接数限制
 工作模式| LT| LT| ET
 内核实现| 轮询| 轮询| 采用回调方式来检测就绪事件
 优点| 跨平台| 理论上没有最大数量限制（数量过大性能急剧下降）| 没有描述符限制IO效率不会随着监视fd数量增长而下降
 缺点| 有最大描述符限制| 索引就绪文件描述符的时间复杂度过高| 在所有socket都很活跃的情况下，可能会有性能问题
-
-
-
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2021-03-28 16:19:33
->Last Evernote Update Date: 2021-04-12 16:00:40
->author: 一的平方
->source: desktop.win
->source-url: https://www.jianshu.com/p/486b0965c296
->source-application: yinxiang.win32
