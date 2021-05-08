@@ -485,14 +485,3 @@ MySQL 三种日志
         3. 修改该行age为30岁，并且修改隐藏字段的事务ID为当前事务2的ID, 那就是2，回滚指针指向刚刚拷贝到undo log的副本记录
         4. 事务提交，释放锁
 
-
-
-
-
----
-### NOTE ATTRIBUTES
->Created Date: 2021-03-06 17:29:09
->Last Evernote Update Date: 2021-03-12 16:35:30
->author: 一的平方
->source: desktop.win
->source-application: yinxiang.win32
