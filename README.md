@@ -12,3 +12,8 @@
   - [内存管理](操作系统/内存管理/内存管理.md)
   - [进程和线程](操作系统/进程和线程/进程和线程.md)
   - [其他](操作系统/其他/其他.md)
+
+
+- Python
+  - [Python面向对象编程](python/Python面向对象编程/Python面向对象编程.md)
+  - [Python语言特性](python/Python语言特性/Python语言特性.md)
