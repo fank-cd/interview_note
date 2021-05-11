@@ -27,7 +27,6 @@ Linux 五种IO模型:
     * 同步阻塞 IO
       * 在linux中，默认情况下所有的socket都是blocking
       * 在这个IO模型中，用户空间的应用程序执行一个系统调用（recvform），这会导致应用程序阻塞，什么也不干，直到数据准备好，并且将数据从内核复制到用户进程，最后进程再处理数据，在等待数据到处理数据的两个阶段，整个进程都被阻塞。不能处理别的网络IO。调用应用程序处于一种不再消费 CPU 而只是简单等待响应的状态
-      *
 
     * 同步非阻塞 IO
       * 同步非阻塞是轮询（polling）方式。在这种模型中，设备是以非阻塞的形式打开的
@@ -71,8 +70,8 @@ IO多路复用
   * select 和 poll 的缺陷在于，当客户端越多，也就是 Socket 集合越大，Socket 集合的遍历和拷贝会带来很大的开销，
   * 如果没有大量的idle-connection或者dead-connection，epoll的效率并不会比select/poll高很多，但是当遇到大量的idle-connection，就会发现epoll的效率大大高于select/poll
 
-| select| poll| epoll
----|---|---
+-| select| poll| epoll
+--- |---|---|---
 索引就绪文件描述符的时间复杂度| O(n)| O(n)| O(1)
 最大支持文件描述符数| 1024| 没有最大连接数限制| 没有最大连接数限制
 工作模式| LT| LT| ET
